@@ -2,7 +2,7 @@
 #SBATCH --partition=rhel6-veryshort
 #SBATCH --ntasks=1
 #SBATCH --mem=10G
-#SBATCH --job-name=ntSelec
+#SBATCH --job-name=Rate
 
 
 export HOME=/atlas/users/mmunozsa/
