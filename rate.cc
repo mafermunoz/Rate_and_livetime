@@ -73,7 +73,7 @@ int main(int argc, char** argv){
   //so far this one will need the name of the file only and with the same name _output,  will be our outut file.
   gSystem->Load("libDmpEvent.so");//loading dmp libraries (have the feeling it is redundant)
   if (argc!=3){
-    printf("The inserted argument is not correct format: ./photons_v6_mc 0(Real Data)/1(MC Data) InputFile OutputFile PDG(MC)");
+    printf("The inserted argument is not correct format: ./photons_v6_mc InputFile OutputFile");
     return 0;
   }
 
