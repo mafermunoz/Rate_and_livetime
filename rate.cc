@@ -101,7 +101,7 @@ int main(int argc, char** argv){
 
 
   Int_t time_ms,time_s;
-  Bool saa;
+  bool saa;
   Float_t trigger[4];
   Float_t sky_coord[4];
   double t_coord[2];
