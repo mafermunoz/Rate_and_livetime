@@ -131,9 +131,7 @@ int main(int argc, char** argv){
   cout<< n_entries<< endl;
 
   ct->GetEntry(0); //Get the intial time
-  int time_start=evtheader->GetSecond();
-  cout<< time_start<< "       "<< time_end<< endl;
-
+  
 
 
   for (int i=0; i< n_entries; i++){
