@@ -104,8 +104,8 @@ int main(int argc, char** argv){
   Bool saa;
   Float_t trigger[4];
   Float_t sky_coord[4];
-  Float_t t_coord[2];
-  Float_t c_coord[2];
+  double t_coord[2];
+  double c_coord[2];
   Float_t energy;
 
 
@@ -154,11 +154,11 @@ int main(int argc, char** argv){
     sat->GetParticleCoord(v1,pointcoord);
     sky_coord=pointcoord;
 
-    Float_t t_c[2];
+    double t_c[2];
     sat->GetTRFCoord(t_c);
     t_coord=t_c;
 
-    Float_t c_c[2];
+    double c_c[2];
     sat->GetCRFCoord(c_c);
     c_coord=c_c;
 
