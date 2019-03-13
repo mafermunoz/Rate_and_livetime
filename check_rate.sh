@@ -1,7 +1,7 @@
 #!/bin/bash
 OUTPATH=/beegfs/dampe/users/mmunozsa/test_rate/
 
-for f in $(cat List_files201512)
+for f in $(cat List_files201601)
 do
 	if [ ! -f ${f} ]; then
 		echo "File not found: " ${f}
