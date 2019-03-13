@@ -18,7 +18,7 @@ def main(inputfile):
     n_entries=myTree.GetEntries()
 
     output_path="/beegfs/dampe/users/mmunozsa/rate/"
-    pFilter = ROOTDmpFilter.DmpFilterOrbit("EventHeader")
+    pFilter = ROOT.DmpFilter.DmpFilterOrbit("EventHeader")
     pFilter.ActiveMe()
     sat=
 
