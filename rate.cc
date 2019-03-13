@@ -103,7 +103,7 @@ int main(int argc, char** argv){
   Int_t time_ms,time_s;
   bool saa;
   Float_t trigger[4];
-  Float_t sky_coord[4];
+  double sky_coord[4];
   double t_coord[2];
   double c_coord[2];
   Float_t energy;
@@ -147,10 +147,11 @@ int main(int argc, char** argv){
     }
 
     DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(evtheader->GetSecond(), evtheader->GetMillisecond());
-    Float_t pointcoord[4];
+    double pointcoord[4];
+
     TVector3 v1(0.0,0.0,1);
 
-    sat->GetParticleCoord(v1,pointcoord);
+    sat->GetParticleCoord(v1,sky_coord);
 
     sat->GetTRFCoord(t_coord);
 
