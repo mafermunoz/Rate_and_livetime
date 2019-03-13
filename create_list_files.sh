@@ -1,4 +1,5 @@
 #!/bin/bash
+LIST_PATH="/beegfs/dampe/prod/FM/FlightData/2A/"
 
 for i in {2015..2019}
 do
@@ -7,7 +8,9 @@ do
   do
     if [[ $j -lt 10 ]]; then
         echo $i"0"$j
+    else
+        echo $LIST_PATH$i$j
     fi
-    echo $i$j
+
   done
 done
