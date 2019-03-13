@@ -131,7 +131,7 @@ int main(int argc, char** argv){
   cout<< n_entries<< endl;
 
   ct->GetEntry(0); //Get the intial time
-  
+
 
 
   for (int i=0; i< n_entries; i++){
@@ -150,7 +150,7 @@ int main(int argc, char** argv){
     Float_t pointcoord[4];
     TVector3 v1(0.0,0.0,1);
 
-    sat->GetParticleCoord(v1,sky_coord);
+    sat->GetParticleCoord(v1,pointcoord);
 
     sat->GetTRFCoord(t_coord);
 
