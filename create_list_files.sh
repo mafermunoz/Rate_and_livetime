@@ -7,9 +7,11 @@ do
   for j in {1..12}
   do
     if [[ $j -lt 10 ]]; then
-        echo $i"0"$j
+        SEARCH_PATH=$LIST_PATH$i"0"$j"*/*.root"
+        ls $SEARCH_PATH > "List_files"$i"0"$j
     else
-        echo $LIST_PATH$i$j
+        SEARCH_PATH= $LIST_PATH$i$j"*/*.root"
+        ls $SEARCH_PATH > "List_files"$i$j
     fi
 
   done
