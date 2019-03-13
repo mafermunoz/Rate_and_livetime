@@ -151,16 +151,12 @@ int main(int argc, char** argv){
     DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(evtheader->GetSecond(), evtheader->GetMillisecond());
     Float_t pointcoord[4];
     TVector3 v1(0.0,0.0,1);
-    sky_coord={0,0}
+
     sat->GetParticleCoord(v1,sky_coord);
 
-    double t_c[2];
-    sat->GetTRFCoord(t_c);
-    t_coord=t_c;
+    sat->GetTRFCoord(t_coord);
 
-    double c_c[2];
-    sat->GetCRFCoord(c_c);
-    c_coord=c_c;
+    sat->GetCRFCoord(c_coord);
 
     livetime->Fill();
 
