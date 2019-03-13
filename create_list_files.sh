@@ -5,8 +5,8 @@ do
   echo $i
   for j in {1..12}
   do
-    if [[$j<10 ]]; then
-      echo "$i 0 $j"
+    if [[${j}<10 ]]; then
+      echo $i$j
     fi
     echo $i$j
   done
