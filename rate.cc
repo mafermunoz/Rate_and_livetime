@@ -142,9 +142,9 @@ int main(int argc, char** argv){
 
     time_s=evtheader->GetSecond();
     time_ms=evtheader->GetMillisecond();
-    saa=pFilter->IsInSAA( evtheader->GetSecond();
+    saa=pFilter->IsInSAA( evtheader->GetSecond());
     for (int j=0;j<4;j++){
-      trigger[j]=evtheader.GeneratedTrigger(j);
+      trigger[j]=evtheader->GeneratedTrigger(j);
 
     }
 
