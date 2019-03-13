@@ -18,7 +18,7 @@ def main(inputfile):
     n_entries=myTree.GetEntries()
 
     output_path="/beegfs/dampe/users/mmunozsa/rate/"
-    pFilter = DmpFilter.DmpFilterOrbit("EventHeader")
+    pFilter = ROOTDmpFilter.DmpFilterOrbit("EventHeader")
     pFilter.ActiveMe()
     sat=
 
@@ -27,7 +27,7 @@ def main(inputfile):
         sec=event.pEvtHeader().GetSecond()
         ms=event.pEvtHeader().GetMillisecond()
         trigger=np.zeros([4])
-        event.pEvtOrbit().
+        #event.pEvtOrbit().
         for j in range (4):
             trigger[j]=event.pEvtHeader().GeneratedTrigger(j)
 
@@ -38,3 +38,4 @@ def main(inputfile):
 
 
 if __name__ == '__main__':
+        main(sys.argv[1])
