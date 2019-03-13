@@ -11,6 +11,6 @@ do
 	OUTF=${BSN/".root"/"_rate.root"}
 	if [ ! -f ${OUTPATH}/${OUTF} ]; then
 		echo "Submitting: " ${BSN}
-		sbatch submit_rate.sh ${f} ${OUTF} > /dev/null
+		sbatch submit_rate.sh ${f} ${OUTPATH}/${OUTF} > /dev/null
 	fi
 done
