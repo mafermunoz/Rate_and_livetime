@@ -1,7 +1,7 @@
 #!/bin/bash
 OUTPATH=/beegfs/dampe/users/mmunozsa/test_rate/
 
-for f in $(cat List_files201603)
+for f in $(cat list_2015_2016)
 do
 	if [ ! -f ${f} ]; then
 		echo "File not found: " ${f}
@@ -12,6 +12,6 @@ do
 	if [ ! -f ${OUTPATH}/${OUTF} ]; then
 		echo "Submitting: " ${BSN}
 		sbatch submit_rate.sh ${f} ${OUTPATH}/${OUTF} > /dev/null
-    sleep 10
+    sleep 8
 	fi
 done
