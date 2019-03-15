@@ -12,7 +12,7 @@ do
 	if [ ! -f ${OUTPATH}/${OUTF} ]; then
 		echo "Submitting: " ${BSN}
 		sbatch submit_rate.sh ${f} ${OUTPATH}/${OUTF} > /dev/null
-    sleep 3
+    sleep 8
 		#count=$count+1
 		#if [[ $ ]]; then
 			#statements
