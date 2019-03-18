@@ -7,6 +7,8 @@ import numpy as np
 
 inF = [x for x in sys.argv if '.root' in x]
 
+name=sys.argv[-1]
+
 badFiles = []
 
 for f in inF:
@@ -36,6 +38,6 @@ for f in inF:
 
 	TF.Close()
 
-with open( 'badFiles.bad','w') as f:
+with open( 'badFiles.bad'+str(name),'w') as f:
 	for item in badFiles:
 		f.write( item+'\n')
