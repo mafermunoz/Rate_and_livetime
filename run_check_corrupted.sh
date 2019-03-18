@@ -1,21 +1,21 @@
 #!/bin/bash
-LIST_PATH="/beegfs/dampe/prod/FM/FlightData/2A/"
+LIST_PATH="/beegfs/dampe/users/mmunozsa/test_rate/DAMPE_2A_OBS_"
 
-for i in {2015..2019}
+for i in {2015..2017}
 do
   echo $i
   for j in {1..12}
   do
     if [[ $j -lt 10 ]]; then
         unset SEARCH_PATH
-        SEARCH_PATH=$LIST_PATH$i"0"$j"*/*/*.root"
+        SEARCH_PATH=$LIST_PATH$i"0"$j"*"
         #echo $SEARCH_PATH
-        ls $SEARCH_PATH > "List_files"$i"0"$j
+        python check_corrupted.py $SEARCH_PATH $i"0"$j
     else
         unset SEARCH_PATH
-        SEARCH_PATH=$LIST_PATH$i$j"*/*/*.root"
+        SEARCH_PATH=$LIST_PATH$i$j"*"
         #echo $SEARCH_PATH
-        ls $SEARCH_PATH > "List_files"$i$j
+        python check_corrupted.py $SEARCH_PATH $i$j
     fi
 
   done
