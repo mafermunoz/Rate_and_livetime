@@ -9,12 +9,12 @@ do
     if [[ $j -lt 10 ]]; then
         unset SEARCH_PATH
         SEARCH_PATH=$LIST_PATH$i"0"$j"*"
-        #echo $SEARCH_PATH
+        echo $SEARCH_PATH
         python check_corrupted.py $SEARCH_PATH $i"0"$j
     else
         unset SEARCH_PATH
         SEARCH_PATH=$LIST_PATH$i$j"*"
-        #echo $SEARCH_PATH
+        echo $SEARCH_PATH
         python check_corrupted.py $SEARCH_PATH $i$j
     fi
 
