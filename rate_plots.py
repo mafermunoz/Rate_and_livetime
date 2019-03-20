@@ -47,7 +47,7 @@ trigger_2a,trigger_2b=np.unique(trigger_2,return_counts=True)
 trigger_3a,trigger_3b=np.unique(trigger_3,return_counts=True)
 trigger_4a,trigger_4b=np.unique(trigger_4,return_counts=True)
 
-info=np.stack(time_a,time_b,saa_a,saa_b,no_saa_a,no_saa_b,trigger_1a,trigger_1b,rigger_2a,trigger,trigger_3a,trigger_3b,trigger_4a,trigger_4b)
+info=np.stack(time_a,time_b,saa_a,saa_b,no_saa_a,no_saa_b,trigger_1a,trigger_1b,trigger_2a,trigger_2b,trigger_3a,trigger_3b,trigger_4a,trigger_4b)
 
 #plt.hist(time,bins=nbins)
 #plt.hist(trigger[:][0],bins=nbins)
