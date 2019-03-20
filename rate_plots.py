@@ -32,6 +32,7 @@ for i in inF:
      trigger_4.append(a['time_s']+a['time_ms']*0.001)
 
 
+print (time)
 time=np.array(time)/60/60/24
 time=time.astype(int)
 saa=np.array(saa)/days
