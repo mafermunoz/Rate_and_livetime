@@ -19,7 +19,7 @@ for i in inF:
      time.append(a['time_s']+a['time_ms']*0.001)
      a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==1')
      saa.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa=0')
+     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==0')
      no_saa.append(a['time_s']+a['time_ms']*0.001)
      a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 and trigger[0]==1')
      trigger_1.append(a['time_s']+a['time_ms']*0.001)
