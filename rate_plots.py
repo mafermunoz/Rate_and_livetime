@@ -21,13 +21,13 @@ for i in inF:
      saa.append(a['time_s']+a['time_ms']*0.001)
      a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==0')
      no_saa.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 and trigger[0]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[0]==1')
      trigger_1.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 and trigger[1]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[1]==1')
      trigger_2.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 and trigger[2]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[2]==1')
      trigger_3.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 and trigger[3]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[3]==1')
      trigger_4.append(a['time_s']+a['time_ms']*0.001)
 
 
