@@ -15,7 +15,12 @@ for i in inF:
      trigger.append(a['trigger'])
 
 
+nbins=(time[-1]-time[0])/60/60/24
 
+#plt.hist(time,bins=nbins)
+#plt.hist(trigger[:][0],bins=nbins)
+#plt.hist(saa==False,bins=nbins)
+#plt.hist(saa=True,bins=nbins)
 
-info=np.stack((time,saa,trigger))
+info=np.stack((time,saa))
 np.save("RATE_info.root",info)
