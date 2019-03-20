@@ -31,13 +31,13 @@ for i in inF:
      trigger_4.append(a['time_s']+a['time_ms']*0.001)
 
 
-time=time/days
-saa=saa/days
-no_saa=no_saa/days
-trigger_1=trigger_1/days
-trigger_2=trigger_2/days
-trigger_3=trigger_3/days
-trigger_4=trigger_4/days
+time=np.array(time)/days
+saa=np.array(saa)/days
+no_saa=np.array(no_saa)/days
+trigger_1=np.array(trigger_1)/days
+trigger_2=np.array(trigger_2)/days
+trigger_3=np.array(trigger_3)/days
+trigger_4=np.array(trigger_4)/days
 
 time_a,time_b=np.unique(time,return_counts=True)
 saa_a,saa_b=np.unique(saa,return_counts=True)
