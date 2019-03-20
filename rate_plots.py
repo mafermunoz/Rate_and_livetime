@@ -39,17 +39,20 @@ trigger_2=np.array(trigger_2)/days
 trigger_3=np.array(trigger_3)/days
 trigger_4=np.array(trigger_4)/days
 
-time_a,time_b=np.unique(time,return_counts=True)
-saa_a,saa_b=np.unique(saa,return_counts=True)
+time_a, time_b=np.unique(time,return_counts=True)
+saa_a, saa_b=np.unique(saa,return_counts=True)
 no_saa_a,no_saa_b=np.unique(no_saa,return_counts=True)
 trigger_1a,trigger_1b=np.unique(trigger_1,return_counts=True)
 trigger_2a,trigger_2b=np.unique(trigger_2,return_counts=True)
 trigger_3a,trigger_3b=np.unique(trigger_3,return_counts=True)
 trigger_4a,trigger_4b=np.unique(trigger_4,return_counts=True)
 
+print time_a.shape
+
+
 info=np.stack((time_a,time_b,saa_a,saa_b,no_saa_a,no_saa_b,trigger_1a,trigger_1b,trigger_2a,trigger_2b,trigger_3a,trigger_3b,trigger_4a,trigger_4b))
 
 #plt.hist(time,bins=nbins)
 #plt.hist(trigger[:][0],bins=nbins)
 
-np.save("RATE_info.root",info)
+np.save("RATE_info.npy",info)
