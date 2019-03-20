@@ -15,23 +15,23 @@ time=[]
 days=60/60/24
 for i in inF:
     #branches=['time_s','time_ms','saa','trigger','sky_coord','energy','t_coord','c_coord'],selection='saa==1'
-     a=root2array(i,branches=['time_s','time_ms'])
+     a=root2array(i,branches=['time_s','time_ms'],stop=10)
      time.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==1')
+     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==1',stop=10)
      saa.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==0')
+     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==0',stop=10)
      no_saa.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[0]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[0]==1',stop=10)
      trigger_1.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[1]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[1]==1',stop=10)
      trigger_2.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[2]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[2]==1',stop=10)
      trigger_3.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[3]==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[3]==1',stop=10)
      trigger_4.append(a['time_s']+a['time_ms']*0.001)
 
 
-time=np.array(time)/days
+time=time/60/60/24
 time=time.astype(int)
 saa=np.array(saa)/days
 saa=saa.astype(int)
