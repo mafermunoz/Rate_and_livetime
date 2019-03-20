@@ -32,12 +32,19 @@ for i in inF:
 
 
 time=np.array(time)/days
+time=time.astype(int)
 saa=np.array(saa)/days
+saa=saa.astype(int)
 no_saa=np.array(no_saa)/days
+no_saa=no_saa.astype(int)
 trigger_1=np.array(trigger_1)/days
+trigger_1=trigger_1.astype(int)
 trigger_2=np.array(trigger_2)/days
+trigger_2=trigger_2.astype(int)
 trigger_3=np.array(trigger_3)/days
+trigger_3=trigger_3.astype(int)
 trigger_4=np.array(trigger_4)/days
+trigger_4=trigger_4.astype(int)
 
 time_a, time_b=np.unique(time,return_counts=True)
 saa_a, saa_b=np.unique(saa,return_counts=True)
