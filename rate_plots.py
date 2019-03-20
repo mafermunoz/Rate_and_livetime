@@ -10,14 +10,16 @@ trigger_2=[]
 trigger_3=[]
 trigger_4=[]
 saa=[]
+no_saa=[]
 time=[]
 
 for i in inF:
      a=root2array(i)
      time.append(a['time_s']+a['time_ms']*0.001)
-     a=root2arry(i,selection='saa==True')
-     saa.appeend(a['time_s']+a['time_ms']*0.001)
-     
+     a=root2array(i,selection='saa==True')
+     saa.append(a['time_s']+a['time_ms']*0.001)
+     a=root2array(i,selection='saa==False')
+     no_saa.append(a['time_s']+a['time_ms']*0.001)
 
 
 nbins=(time[-1]-time[0])/60/60/24
