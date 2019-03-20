@@ -1,5 +1,6 @@
 from root_numpy import root2array
 import numpy as np
+import sys
 
 inF = [x for x in sys.argv if '.root' in x]
 
@@ -16,5 +17,5 @@ for i in inF:
 
 
 
-info=np.stack((time,saa,trigger))    
+info=np.stack((time,saa,trigger))
 np.save("RATE_info.root",info)
