@@ -4,15 +4,20 @@ import sys
 
 inF = [x for x in sys.argv if '.root' in x]
 
-time=[]
-trigger=[]
+ncounts=[]
+trigger_1=[]
+trigger_2=[]
+trigger_3=[]
+trigger_4=[]
 saa=[]
+time=[]
 
 for i in inF:
      a=root2array(i)
      time.append(a['time_s']+a['time_ms']*0.001)
-     saa.append(a['saa'])
-     trigger.append(a['trigger'])
+     a=root2arry(i,selection='saa==True')
+     saa.appeend(a['time_s']+a['time_ms']*0.001)
+     
 
 
 nbins=(time[-1]-time[0])/60/60/24
