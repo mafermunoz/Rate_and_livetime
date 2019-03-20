@@ -1,10 +1,10 @@
 #!/bin/bash
 LIST_PATH="/beegfs/dampe/users/mmunozsa/test_rate/DAMPE_2A_OBS_"
 
-for i in {2019}
+for i in {2019..2019}
 do
   echo $i
-  for j in {1..12}
+  for j in {1..3}
   do
     if [[ $j -lt 10 ]]; then
         unset SEARCH_PATH
