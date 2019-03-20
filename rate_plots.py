@@ -16,9 +16,9 @@ time=[]
 for i in inF:
      a=root2array(i)
      time.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,selection='saa==True')
+     a=root2array(i,selection='saa=True')
      saa.append(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,selection='saa==False')
+     a=root2array(i,selection='saa=False')
      no_saa.append(a['time_s']+a['time_ms']*0.001)
 
 
