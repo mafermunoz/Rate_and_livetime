@@ -13,6 +13,7 @@ inF = [x for x in sys.argv if '.root' in x]
 # no_saa=[]
 # time=[]
 # days=60/60/24
+info=np.array([14])
 for i in inF:
     #branches=['time_s','time_ms','saa','trigger','sky_coord','energy','t_coord','c_coord'],selection='saa==1'
      a=root2array(i,branches=['time_s','time_ms'])
@@ -48,18 +49,18 @@ for i in inF:
      trigger_4=(trigger_4)/60/60/24
      trigger_4=trigger_4.astype(int)
 
-     time_a, time_b=np.unique(time,return_counts=True)
-     saa_a, saa_b=np.unique(saa,return_counts=True)
-     no_saa_a,no_saa_b=np.unique(no_saa,return_counts=True)
-     trigger_1a,trigger_1b=np.unique(trigger_1,return_counts=True)
-     trigger_2a,trigger_2b=np.unique(trigger_2,return_counts=True)
-     trigger_3a,trigger_3b=np.unique(trigger_3,return_counts=True)
-     trigger_4a,trigger_4b=np.unique(trigger_4,return_counts=True)
+     info[0], info[1]=np.unique(time,return_counts=True)
+     info[2], info[3]=np.unique(saa,return_counts=True)
+     info[4], info[5]=np.unique(no_saa,return_counts=True)
+     info[6], info[7]=np.unique(trigger_1,return_counts=True)
+     info[8], info[9]=np.unique(trigger_2,return_counts=True)
+     info[10], info[11]=np.unique(trigger_3,return_counts=True)
+     info[12], info[13]=np.unique(trigger_4,return_counts=True)
 
-     print time_a
+     #print time_a
 
 
-     info=np.stack((time_a,time_b,saa_a,saa_b,no_saa_a,no_saa_b,trigger_1a,trigger_1b,trigger_2a,trigger_2b,trigger_3a,trigger_3b,trigger_4a,trigger_4b))
+     #info=np.stack((time_a,time_b,saa_a,saa_b,no_saa_a,no_saa_b,trigger_1a,trigger_1b,trigger_2a,trigger_2b,trigger_3a,trigger_3b,trigger_4a,trigger_4b))
 
      #plt.hist(time,bins=nbins)
      #plt.hist(trigger[:][0],bins=nbins)
