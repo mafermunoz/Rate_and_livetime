@@ -13,7 +13,7 @@ inF = [x for x in sys.argv if '.root' in x]
 # no_saa=[]
 # time=[]
 # days=60/60/24
-info=np.zeros([14])
+info=[[] for i in range(14)]
 for i in inF:
     #branches=['time_s','time_ms','saa','trigger','sky_coord','energy','t_coord','c_coord'],selection='saa==1'
      a=root2array(i,branches=['time_s','time_ms'])
