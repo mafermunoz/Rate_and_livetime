@@ -24,7 +24,7 @@ for i in inF:
      lt_all=[]
      lt_all_l=[]
      lt_all_b=[]
-     info=np.stack((delta_t,saa,l,b))
+     #info=np.stack((delta_t,saa,l,b))
      for i,x in enumerate(delta_t):
          if (x<0.1 and x>0.00375 and saa[i]==True):
              lt_wosaa.append((x-0.00375))
