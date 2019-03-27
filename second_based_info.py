@@ -30,8 +30,8 @@ for i in inF:
      #trigger_3=(a['time_s']+a['time_ms']*0.001)
      #a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[3]==1')
      #trigger_4=(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger','c_coord'],selection='saa==0')
-     pos_sky=(a['c_coord'])
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger','sky_coord'],selection='saa==0')
+     pos_sky=(a['sky_coord'])
 
 
 
@@ -50,9 +50,9 @@ for i in inF:
 
      #trigger_4=trigger_4.astype(int)
 
-     info[0], info[1]=np.unique(time,return_counts=True)
+     info[0], info[1],info[3]=np.unique(time,return_counts=True,return_index=True)
      #info[2], info[3]=np.unique(saa,return_counts=True)
-     info[4], info[5]=np.unique(no_saa,return_counts=True)
+     info[4], info[5],info[6]=np.unique(no_saa,return_counts=True,return_index=True)
      #info[6], info[7]=np.unique(trigger_1,return_counts=True)
      #info[8], info[9]=np.unique(trigger_2,return_counts=True)
      #info[10], info[11]=np.unique(trigger_3,return_counts=True)
