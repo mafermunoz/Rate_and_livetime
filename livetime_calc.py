@@ -1,6 +1,7 @@
 from root_numpy import root2array
 import numpy as np
-import sys 
+import sys
+
 inF = [x for x in sys.argv if '.root' in x]
 
 for i in inF:
