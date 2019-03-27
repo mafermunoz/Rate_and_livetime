@@ -10,8 +10,8 @@ for i in inF:
      delta_t=time[1:]-time[:-1]
      saa=np.logical_and(a['saa'][1:], a['saa'][:-1])
      time_avg=0.5*(time[1:]+time[:-1])
-     sky_coord_l=a['sky_coord'][3]
-     sky_coord_b=a['sky_coord'][4]
+     sky_coord_l=a['sky_coord',3]
+     sky_coord_b=a['sky_coord',4]
      l=0.5*(sky_coord_l[1:]+sky_coord_l[:-1])
      b=0.5*(sky_coord_b[1:]+sky_coord_b[:-1])
      lt_wosaa=[]
