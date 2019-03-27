@@ -11,4 +11,4 @@ source /cvmfs/dampe.cern.ch/rhel6-64/etc/setup.sh
 source ~/astro/bin/activate
 dampe_init > /dev/null
 
-python rate_plot_filebyflie.py ${1}
+python second_based_info.py ${1}
