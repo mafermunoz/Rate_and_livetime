@@ -25,22 +25,21 @@ for i in inF:
      lt_all_b=[]
      info=np.stack((delta_t,saa,l,b))
     for i,x in enumerate(delta_t):
+         if (x<0.1 and x>0.00375 and saa[i]==True):
+             lt_wosaa.append((x-0.00375))
+             lt_wosaa_l.append(l[i])
+             lt_wosaa_b.append(b[i])
 
-        if (x<0.1 and x>0.00375 and saa[i]==True):
-            lt_wosaa.append((x-0.00375))
-            lt_wosaa_l.append(l[i])
-            lt_wosaa_b.append(b[i])
 
+         if (x<0.1 and x>0.00375 and saa[i]==False):
+             lt_saa.append((x-0.00375))
+             lt_saa_l.append(l[i])
+             lt_saa_b.append(b[i])
 
-        if (x<0.1 and x>0.00375 and saa[i]==False):
-            lt_saa.append((x-0.00375))
-            lt_saa_l.append(l[i])
-            lt_saa_b.append(b[i])
-
-        if (x<0.1 and x>0.00375):
-            lt_all.append((x-0.00375))
-            lt_all_l.append(l[i])
-            lt_all_b.append(b[i])
+         if (x<0.1 and x>0.00375):
+             lt_all.append((x-0.00375))
+             lt_all_l.append(l[i])
+             lt_all_b.append(b[i])
      wosaa=np.stack((lt_wosaa,lt_wosaa_l,lt_wosaa_b))
      saa=np.stack((lt_saa,lt_saa_l,lt_saa_b))
      all=np.stack((lt_all,lt_all_l,lt_all_b))
