@@ -50,9 +50,9 @@ for i in inF:
 
      #trigger_4=trigger_4.astype(int)
 
-     info[0], info[1],info[3]=np.unique(time,return_counts=True,return_index=True)
+     info[0], info[1],info[2],info[3]=np.unique(time,return_counts=True,return_index=True,return_inverse=True)
      #info[2], info[3]=np.unique(saa,return_counts=True)
-     info[4], info[5],info[6]=np.unique(no_saa,return_counts=True,return_index=True)
+     info[4], info[5],info[6],info[7]=np.unique(no_saa,return_counts=True,return_index=True,return_inverse=True)
      #info[6], info[7]=np.unique(trigger_1,return_counts=True)
      #info[8], info[9]=np.unique(trigger_2,return_counts=True)
      #info[10], info[11]=np.unique(trigger_3,return_counts=True)
