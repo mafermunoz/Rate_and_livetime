@@ -30,7 +30,7 @@ for i in inF:
      #trigger_3=(a['time_s']+a['time_ms']*0.001)
      #a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[3]==1')
      #trigger_4=(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0')
+     a=root2array(i,branches=['time_s','time_ms','saa','trigger','c_coord'],selection='saa==0')
      pos_sky=(a['c_coord'])
 
 
