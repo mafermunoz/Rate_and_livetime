@@ -44,5 +44,5 @@ for i in inF:
      wosaa=np.stack((lt_wosaa,lt_wosaa_l,lt_wosaa_b))
      saa=np.stack((lt_saa,lt_saa_l,lt_saa_b))
      all=np.stack((lt_all,lt_all_l,lt_all_b))
-
-     np.save("Livetime"+str(i),wosaa,saa,all)
+     name=i.split("/")[-1].replace("rate.root","_livetime.npz")
+     np.savez(name,wosaa,saa,all)
