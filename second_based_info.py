@@ -68,4 +68,4 @@ for i in inF:
      name=i.split("/")[-1].replace("rate.root","_rate_per_second.npy")
      name_2=i.split("/")[-1].replace("rate.root","_rate_per_second_pos_sky.npy")
      np.save(name,info)
-     np.save(name)
+     np.save(name,pos_sky)
