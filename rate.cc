@@ -126,6 +126,9 @@ int main(int argc, char** argv){
   TBranch *b_evtheader;
   ct->SetBranchAddress("EventHeader",&evtheader,&b_evtheader);
 
+  DmpEvtBgoRec* bgorec  = new  DmpEvtBgoRec();
+  TBranch *b_bgorec;
+  ct->SetBranchAddress("DmpEvtBgoRec",&bgorec,&b_bgorec);
 
   Long64_t n_entries= ct->GetEntries();
   cout<< n_entries<< endl;
@@ -145,7 +148,7 @@ int main(int argc, char** argv){
       trigger[j]=evtheader->GeneratedTrigger(j);
 
     }
-    energy=bgorec->GetTotalEnergy()
+    energy=bgorec->GetTotalEnergy();
 
     DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(time_s, time_ms);
     double pointcoord[4];
