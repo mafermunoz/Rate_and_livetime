@@ -102,10 +102,10 @@ int main(int argc, char** argv){
 
   Int_t time_ms,time_s;
   bool saa;
-  Float_t trigger[4];
-  double sky_coord[4];
-  double t_coord[2];
-  double c_coord[2];
+  Float_t trigger[4]={};
+  double sky_coord[4]={};
+  double t_coord[2]={};
+  double c_coord[2]={};
   Float_t energy;
 
 
@@ -161,6 +161,7 @@ int main(int argc, char** argv){
     sat->GetTRFCoord(t_coord);
     double c_coord[2];
     sat->GetCRFCoord(c_coord);
+    cout << sky_coord[0], sky_coord[1], sky_coord[2],sky_coord[3] << endl;
 
     livetime->Fill();
 
