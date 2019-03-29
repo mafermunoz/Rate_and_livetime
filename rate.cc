@@ -145,11 +145,12 @@ int main(int argc, char** argv){
       trigger[j]=evtheader->GeneratedTrigger(j);
 
     }
+    energy=bgorec->GetTotalEnergy()
 
-    DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(evtheader->GetSecond(), evtheader->GetMillisecond());
+    DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(time_s, time_ms);
     double pointcoord[4];
 
-    TVector3 v1(0.0,0.0,1);
+    TVector3 v1(0,0,1);
 
     sky_coord[4] = { };
     sat->GetParticleCoord(v1,sky_coord);
