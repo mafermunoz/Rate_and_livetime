@@ -172,7 +172,7 @@ int main(int argc, char** argv){
     c_coord[0]=d2coord[0];
     c_coord[1]=d2coord[1];
 
-    cout << sky_coord[0] <<sky_coord[1]<<sky_coord[2]<<sky_coord[3] << endl;
+    //cout << sky_coord[0] <<sky_coord[1]<<sky_coord[2]<<sky_coord[3] << endl;
 
     livetime->Fill();
 
