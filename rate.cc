@@ -151,10 +151,11 @@ int main(int argc, char** argv){
 
     TVector3 v1(0.0,0.0,1);
 
+    sky_coord[4] = { }
     sat->GetParticleCoord(v1,sky_coord);
-
+    t_coord[2]= { }
     sat->GetTRFCoord(t_coord);
-
+    c_coord[2]={ }
     sat->GetCRFCoord(c_coord);
 
     livetime->Fill();
