@@ -116,9 +116,9 @@ int main(int argc, char** argv){
   livetime->Branch("time_s",&time_s);
   livetime->Branch("time_ms",&time_ms);
   livetime->Branch("trigger",trigger,"trigger[4]/F");
-  livetime->Branch("sky_coord",sky_coord,"sky_coord[4]/F");
-  livetime->Branch("t_coord",t_coord,"t_coord[2]/F");
-  livetime->Branch("c_coord",c_coord,"c_coord[2]/F");
+  livetime->Branch("sky_coord",sky_coord,"sky_coord[4]/D");
+  livetime->Branch("t_coord",t_coord,"t_coord[2]/D");
+  livetime->Branch("c_coord",c_coord,"c_coord[2]/D");
   livetime->Branch("saa",&saa);
   livetime->Branch("energy",&energy);
 
