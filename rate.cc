@@ -155,19 +155,19 @@ int main(int argc, char** argv){
 
     TVector3 v1(0.0,0.0,1.0);
 
-    double dcoord[4];
+    double dcoord[4]={};
     sat->GetParticleCoord(v1,dcoord);
     sky_coord[0]=dcoord[0];
     sky_coord[1]=dcoord[1];
     sky_coord[2]=dcoord[2];
     sky_coord[3]=dcoord[3];
 
-    double d1coord[2];
+    double d1coord[2]={};
     sat->GetTRFCoord(d1coord);
     t_coord[0]=d1coord[0];
     t_coord[1]=d1coord[1];
 
-    double d2coord[2];
+    double d2coord[2]={};
     sat->GetCRFCoord(d2coord);
     c_coord[0]=d2coord[0];
     c_coord[1]=d2coord[1];
