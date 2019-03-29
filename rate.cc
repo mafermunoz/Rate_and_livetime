@@ -161,7 +161,7 @@ int main(int argc, char** argv){
     sat->GetTRFCoord(t_coord);
     double c_coord[2];
     sat->GetCRFCoord(c_coord);
-    cout << sky_coord[0], sky_coord[1], sky_coord[2],sky_coord[3] << endl;
+    cout << sky_coord[0] <<sky_coord[1]<<sky_coord[2]<<sky_coord[3] << endl;
 
     livetime->Fill();
 
