@@ -150,7 +150,7 @@ int main(int argc, char** argv){
     }
     energy=bgorec->GetTotalEnergy();
 
-    DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(time_s, time_ms);
+    DmpHKDSatStatus* sat = gHKDataReader->GetSatStatus(time_s ,time_ms);
     double pointcoord[4];
 
     TVector3 v1(0.0,0.0,1.0);
