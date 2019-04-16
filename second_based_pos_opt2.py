@@ -15,7 +15,7 @@ print indices_unique_values.shape
 number_repetitions=time[7]
 print number_repetitions.shape
 
-pos=[np.empty(4) for i in range (len(unique_values))]
+pos=[[]for i in range (len(unique_values))]
 #start_count=time[5]
 d_ra=np.array([])
 #d_dec=np.array([])
@@ -35,9 +35,10 @@ for i,x in enumerate (indices_unique_values):
     #d_dec=np.append(d_dec,np.average(a[b[0],1]))
     #d_lon=np.append(d_lon,np.average(a[b[0],2]))
     #d_lat=np.append(d_lat,np.average(a[b[0],3]))
+final=[[]for i in range (len(unique_values))]
 for i in range(len(unique_values)):
-    pos[i]=pos[i].reshape(len(pos[i])/4,4)
-    pos[i]=np.average(pos[i],axis=0)
+    b=pos[i].reshape(len(pos[i])/4,4)
+    final[i]=np.average(b,axis=0)
 #     if i>1000:
 #         break
 #pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
