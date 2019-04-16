@@ -26,7 +26,7 @@ d_ra=np.array([])
 for i,x in enumerate (indices_unique_values):
     #number_repetitions[]
     #number_repetitions[i]
-    pos[x]=np.append(pos[x],[a[i]])
+    pos[x]=np.append(pos[x],[a[i]],axis=0)
     print i
     if i>1000:
         break
