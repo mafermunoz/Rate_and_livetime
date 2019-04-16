@@ -22,13 +22,12 @@ d_ra=np.array([])
 #d_lon=np.array([])
 #d_lat=np.array([])
 for i,x in enumerate (indices_unique_values):
-
+    while i<1000:
     #number_repetitions[i]
-    pos[x]=np.append(pos[x],a[i])
-    if i<1000:
-        return
+        pos[x]=np.append(pos[x],a[i])
+
     #if (i%1000==0):
-    print i
+        print i
     #d_ra=np.append(d_ra,np.average(a[b[0]],axis=0))
     #d_dec=np.append(d_dec,np.average(a[b[0],1]))
     #d_lon=np.append(d_lon,np.average(a[b[0],2]))
