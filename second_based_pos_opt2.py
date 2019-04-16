@@ -27,7 +27,7 @@ for i,x in enumerate (indices_unique_values):
     #number_repetitions[]
 
     pos[x]=np.append(pos[x],[a[i]])
-    if (i%10000==0):
+    if (i%1000000==0):
         print i
     #d_ra=np.append(d_ra,np.average(a[b[0]],axis=0))
     #d_dec=np.append(d_dec,np.average(a[b[0],1]))
