@@ -37,7 +37,7 @@ for i,x in enumerate (indices_unique_values):
     #d_lat=np.append(d_lat,np.average(a[b[0],3]))
 final=[[]for i in range (len(unique_values))]
 for i in range(len(unique_values)):
-    b=pos[i].reshape(len(pos[i])/4,4)
+    b=np.array(pos[i]).reshape(len(pos[i])/4,4)
     final[i]=np.average(b,axis=0)
 #     if i>1000:
 #         break
