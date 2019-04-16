@@ -39,7 +39,7 @@ final=[[]for i in range (len(unique_values))]
 for i in range(len(unique_values)):
     b=np.array(pos[i])
     b=b.reshape(len(b)/4,4)
-    final[i]=np.average(b,axis=1)
+    final[i]=np.average(b,axis=0)
 #     if i>1000:
 #         break
 #pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
