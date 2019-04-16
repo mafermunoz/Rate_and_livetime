@@ -27,6 +27,10 @@ for i in range (len(unique_values)):
 
     #number_repetitions[i]
     b=np.where(indices_unique_values==i)
+
+    print b
+    print ra[b[0]]
+    print np.average(ra[b[0]])
     d_ra=np.append(d_ra,np.average(ra[b[0]]))
     d_dec=np.append(d_dec,np.average(dec[b[0]]))
     d_lon=np.append(d_lon,np.average(lon[b[0]]))
