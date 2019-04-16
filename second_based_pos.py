@@ -35,4 +35,4 @@ for i in range (len(unique_values)):
 
 #pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
 
-np.save(name+str(averge_pos_per_second),d_ra)
+np.save(name+str("averge_pos_per_second"),d_ra)

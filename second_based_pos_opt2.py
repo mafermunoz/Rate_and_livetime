@@ -36,7 +36,7 @@ for i,x in enumerate (indices_unique_values):
 final=[[]for i in range (len(unique_values))]
 for i in range(len(unique_values)):
     b=np.array(pos[i])
-    b=b.reshape(number_repetitions[i]/4,4)
+    b=b.reshape(number_repetitions[i],4)
     final[i]=np.average(b,axis=0)
 #     if i>1000:
 #         break
