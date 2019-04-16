@@ -1,5 +1,5 @@
 #!/bin/bash
-LIST_PATH="/beegfs/dampe/users/mmunozsa/second_based/second_basedDAMPE_2A_OBS_"
+LIST_PATH="/beegfs/dampe/users/mmunozsa/second_based_info/second_based_infoDAMPE_2A_OBS_"
 
 for i in {2016..2016}
 do
