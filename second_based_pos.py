@@ -5,6 +5,7 @@ name=sys.argv[1]
 
 a=np.load(name+str("__rate_per_second_pos_sky_nosaa.npy"))#File ending _rate_per_second_pos_sky_nosaa.npy contianing the position information
 time=np.load(name+str("__rate_per_second_nosaa.npy"))#File endifit _rate_per_second_nosaa.npy events  per second
+print a.shape
 ra=a[0]
 dec=a[1]
 lon=a[2]
