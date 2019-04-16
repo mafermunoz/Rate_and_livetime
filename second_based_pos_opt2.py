@@ -22,17 +22,20 @@ d_ra=np.array([])
 #d_lon=np.array([])
 #d_lat=np.array([])
 for i,x in enumerate (indices_unique_values):
-    while i<1000:
-    #number_repetitions[i]
-        pos[x]=np.append(pos[x],a[i])
 
+    #number_repetitions[i]
+    pos[x]=np.append(pos[x],a[i])
+    if i<1000:
+        break
     #if (i%1000==0):
-        print i
     #d_ra=np.append(d_ra,np.average(a[b[0]],axis=0))
     #d_dec=np.append(d_dec,np.average(a[b[0],1]))
     #d_lon=np.append(d_lon,np.average(a[b[0],2]))
     #d_lat=np.append(d_lat,np.average(a[b[0],3]))
-
+for i in range(len(unique_values)):
+    pos[i]=np.average(pos[i],axis=0)
+    if i>1000:
+        break
 #pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
 
 np.save(name+str(averge_pos_per_second),pos)
