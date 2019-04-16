@@ -16,12 +16,12 @@ inF = [x for x in sys.argv if '.root' in x]
 info=[[] for i in range(14)]
 for i in inF:
     #branches=['time_s','time_ms','saa','trigger','sky_coord','energy','t_coord','c_coord'],selection='saa==1'
-     a=root2array(i,branches=['time_s','time_ms'])
-     time=(a['time_s']+a['time_ms']*0.001)
+     #a=root2array(i,branches=['time_s','time_ms'])
+     #time=(a['time_s']+a['time_ms']*0.001)
     # a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==1')
      #saa=(a['time_s']+a['time_ms']*0.001)
-     a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==0')
-     no_saa=(a['time_s']+a['time_ms']*0.001)
+     #a=root2array(i,branches=['time_s','time_ms','saa'],selection='saa==0')
+     #no_saa=(a['time_s']+a['time_ms']*0.001)
      #a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[0]==1')
      #trigger_1=(a['time_s']+a['time_ms']*0.001)
      #a=root2array(i,branches=['time_s','time_ms','saa','trigger'],selection='saa==0 && trigger[1]==1')
@@ -32,11 +32,11 @@ for i in inF:
      #trigger_4=(a['time_s']+a['time_ms']*0.001)
      a=root2array(i,branches=['time_s','time_ms','saa','trigger','sky_coord'],selection='saa==0')
      pos_sky=(a['sky_coord'])
+     no_saa=(a['time_s']+a['time_ms']*0.001)
 
 
-
-     time=time.astype(int)
-     print (time)
+     #time=time.astype(int)
+     #print (time)
 
      #saa=saa.astype(int)
 
@@ -50,7 +50,7 @@ for i in inF:
 
      #trigger_4=trigger_4.astype(int)
 
-     info[0], info[1],info[2],info[3]=np.unique(time,return_counts=True,return_index=True,return_inverse=True)
+     #info[0], info[1],info[2],info[3]=np.unique(time,return_counts=True,return_index=True,return_inverse=True)
      #info[2], info[3]=np.unique(saa,return_counts=True)
      info[4], info[5],info[6],info[7]=np.unique(no_saa,return_counts=True,return_index=True,return_inverse=True)
      #info[6], info[7]=np.unique(trigger_1,return_counts=True)
@@ -65,8 +65,8 @@ for i in inF:
 
      #plt.hist(time,bins=nbins)
      #plt.hist(trigger[:][0],bins=nbins)
-     outpath="/beegfs/dampe/users/mmunozsa/"
-     name=i.split("/")[-1].replace("rate.root","_rate_per_second.npy")
-     name_2=i.split("/")[-1].replace("rate.root","_rate_per_second_pos_sky.npy")
+     outpath="/beegfs/dampe/users/mmunozsa/second_based_info"
+     name=i.split("/")[-1].replace("rate.root","_rate_per_second_nosaa.npy")
+     name_2=i.split("/")[-1].replace("rate.root","_rate_per_second_pos_sky_nosaa.npy")
      np.save(outpath+name,info)
      np.save(outpath+name_2,pos_sky)
