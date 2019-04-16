@@ -37,10 +37,11 @@ for i,x in enumerate (indices_unique_values):
     #d_lat=np.append(d_lat,np.average(a[b[0],3]))
 final=[[]for i in range (len(unique_values))]
 for i in range(len(unique_values)):
-    b=np.array(pos[i]).reshape(len(pos[i])/4,4)
-    final[i]=np.average(b,axis=0)
+    b=np.array(pos[i])
+    b=b.reshape(len(b)/4,4)
+    final[i]=np.average(b,axis=1)
 #     if i>1000:
 #         break
 #pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
 
-np.save(name+str("averge_pos_per_second"),pos)
+np.save(name+str("averge_pos_per_second"),final)
