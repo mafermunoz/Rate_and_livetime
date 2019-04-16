@@ -21,10 +21,10 @@ d_ra=np.array([])
 #d_dec=np.array([])
 #d_lon=np.array([])
 #d_lat=np.array([])
-for i,x  in enuemrate (number_repetitions):
+#for i,x  in enuemrate (number_repetitions):
 
-    for i,x in enumerate (indices_unique_values):
-    number_repetitions[]
+for i,x in enumerate (indices_unique_values):
+    #number_repetitions[]
     #number_repetitions[i]
     pos[x]=np.append(pos[x],[a[i]])
     print i
