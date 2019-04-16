@@ -25,6 +25,7 @@ for i,x in enumerate (indices_unique_values):
 
     #number_repetitions[i]
     pos[x]=np.append(pos[x],a[i])
+    print(i)
     if i<1000:
         break
     #if (i%1000==0):
@@ -38,4 +39,4 @@ for i in range(len(unique_values)):
         break
 #pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
 
-np.save(name+str(averge_pos_per_second),pos)
+np.save(name+str("averge_pos_per_second"),pos)
