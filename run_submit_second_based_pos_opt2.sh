@@ -10,12 +10,12 @@ do
         unset SEARCH_PATH
         SEARCH_PATH=$LIST_PATH$i"0"$j
         echo $SEARCH_PATH
-        sbatch submit_rate_info.sh $SEARCH_PATH
+        sbatch submit_second_based_pos_opt2.sh $SEARCH_PATH
     else
         unset SEARCH_PATH
         SEARCH_PATH=$LIST_PATH$i$j
         echo $SEARCH_PATH
-        sbatch submit_rate_info.sh  $SEARCH_PATH
+        sbatch submit_second_based_pos_opt2.sh $SEARCH_PATH
     fi
 
   done
