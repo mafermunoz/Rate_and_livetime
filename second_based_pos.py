@@ -11,6 +11,7 @@ dec=a[:][1]
 lon=a[:][2]
 lat=a[:][3]
 
+print ra.shape
 ##loop
 unique_values=time[4]
 print unique_values.shape
