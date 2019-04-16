@@ -12,8 +12,12 @@ lat=a[3]
 
 ##loop
 unique_values=time[4]
+print unique_values.shape
 indices_unique_values=time[6]
+print indices_unique_values.shape
 number_repetitions=time[7]
+print number_repetitions.shape
+
 #start_count=time[5]
 d_ra=np.array([])
 d_dec=np.array([])
@@ -22,7 +26,7 @@ d_lat=np.array([])
 for i in range (len(unique_values)):
 
     #number_repetitions[i]
-    b=np.where[indices_unique_values==i]
+    b=np.where(indices_unique_values==i)
     d_ra=np.append(d_ra,np.average(ra[b[0]]))
     d_dec=np.append(d_dec,np.average(dec[b[0]]))
     d_lon=np.append(d_lon,np.average(lon[b[0]]))
@@ -31,4 +35,4 @@ for i in range (len(unique_values)):
 
 pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
 
-np.save(name+str(averge_pos_per_second),pos)  
+np.save(name+str(averge_pos_per_second),pos)
