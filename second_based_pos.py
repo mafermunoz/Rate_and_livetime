@@ -25,11 +25,12 @@ for i in range (len(unique_values)):
     #number_repetitions[i]
     b=np.where(indices_unique_values==i)
 
-
-    d_ra=np.append(d_ra,np.average(a[b[0]][0]))
-    d_dec=np.append(d_dec,np.average(a[b[0]][1]))
-    d_lon=np.append(d_lon,np.average(a[b[0]][2]))
-    d_lat=np.append(d_lat,np.average(a[b[0]][3]))
+    if (i%1000==0):
+        print i
+    d_ra=np.append(d_ra,np.average(a[b[0],0]))
+    d_dec=np.append(d_dec,np.average(a[b[0],1]))
+    d_lon=np.append(d_lon,np.average(a[b[0],2]))
+    d_lat=np.append(d_lat,np.average(a[b[0],3]))
 
 
 pos=np.vstack((d_ra,d_dec,d_lon,d_lat))
