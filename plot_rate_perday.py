@@ -14,8 +14,8 @@ import numpy as np
 matplotlib.rcParams.update({'font.size': 36})
 import time
 import sys
-from ipywidgets import FloatProgress
-from IPython.display import display
+#from ipywidgets import FloatProgress
+#from IPython.display import display
 import glob
 matplotlib.rcParams['text.usetex'] = True
 matplotlib.rcParams['text.latex.unicode'] = True
