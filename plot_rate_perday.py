@@ -1,4 +1,4 @@
-%matplotlib inline
+##%matplotlib inline
 import matplotlib
 import matplotlib.pyplot as plt
 ##from custom_colors import b as cmap_ds9
