@@ -23,7 +23,7 @@ from lmfit.model import save_modelresult
 from lmfit.models import GaussianModel
 from astropy.time import Time
 
-file_path='DAMPE_2A_OBS_2016*__rate_info.npy'
+file_path='DAMPE_2A_OBS_201*__rate_info.npy'
 txt=glob.glob(file_path)
 info=[[] for i in range(len(txt))]
 len(info)
