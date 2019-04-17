@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=rhel6-short
 #SBATCH --ntasks=1
-#SBATCH --mem=60G
+#SBATCH --mem=30G
 #SBATCH --job-name=Rate
 
 
