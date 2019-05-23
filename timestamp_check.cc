@@ -105,7 +105,7 @@ int main(int argc, char** argv){
 
   //Initialization  of the interfac to analyze data.
 
- const char* filename_svc = argv[2];
+ const char* filename_svc = argv[1];
   gIOSvc->Set("InData/Read",filename_svc);
   gIOSvc->Set("OutData/NoOutput", "True");
   gIOSvc->Initialize();
@@ -113,7 +113,7 @@ int main(int argc, char** argv){
 
   //Get the main collection Tree  and clone it
   TTree* ct=(TTree*)gIOSvc->GetTree("CollectionTree");
-  file_output->cd();
+
 
   DmpEvtHeader* evtheader = new DmpEvtHeader();
   TBranch *b_evtheader;
