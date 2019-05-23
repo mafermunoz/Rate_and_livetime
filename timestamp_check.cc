@@ -60,7 +60,7 @@ added out put for the ditribution of the LRMS, TRMS and RRMS, so far no cuts  ap
 #include "TKey.h"
 #include "TMath.h"
 //DAMPE Libraries
-#include "DmpStkLadderAdc.h"
+#include "DmpStkLadderAdc.hh"
 #include "DmpStkTrack.h"
 #include "DmpStkSiCluster.h"
 #include "DmpEvtPsdHits.h"
