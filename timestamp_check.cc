@@ -96,7 +96,7 @@ int main(int argc, char** argv){
   //Open file to  analyze
   TFile * file_input= TFile ::Open(argv[1]);
   //Define output text file
-    FILE *fevents;
+  FILE *fevents;
   string output= (string)argv[2];
   string  output1= output + ".txt";
   fevents=fopen(output1.c_str(),"w");
@@ -133,10 +133,6 @@ int main(int argc, char** argv){
 
 
 
-
-
-file_output->Write();
-file_output->Close();
 
 
 
