@@ -83,11 +83,6 @@ added out put for the ditribution of the LRMS, TRMS and RRMS, so far no cuts  ap
 #include "DmpEvtSimuHeader.h"
 
 
-#include "histo_def.hpp"
-#include "def_var.hpp"
-#include "eff_cal.hpp"
-##include "functions_photon_selection.hpp"
-
 using namespace std;
 
 
