@@ -13,7 +13,7 @@ do
     year=${res##*/}
     OUTF=$OUTPATH$year$month$name
     #echo $OUTF
-    if [ ! -f ${OUTF} ]; then
+    if [ ! -f ${OUTF}.txt ]; then
 			echo $OUTF
 			sbatch submit_timestamp_check.sh ${line} ${OUTF} > /dev/null
     fi
