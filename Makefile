@@ -31,9 +31,9 @@ LIBS += -L $(DMPSWSYS)/lib -lDmpEvent -lDmpService -lDmpEventFilter -lDmpKernel
 #------------------------------------------------------------------------------
 
 
-CLUMONIO       = rate.$(ObjSuf)
-CLUMONIS       = rate.$(SrcSuf)
-CLUMONI        = rate$(ExeSuf)
+CLUMONIO       = timestamp_check.$(ObjSuf)
+CLUMONIS       = timestamp_check.$(SrcSuf)
+CLUMONI        = timestamp_check$(ExeSuf)
 
 
 OBJS          = $(CLUMONIO)
