@@ -1,5 +1,5 @@
 #!/bin/bash
-OUTPATH=/beegfs/dampe/users/mmunozsa/timestamp_check/
+OUTPATH=/beegfs/dampe/users/mmunozsa/timestamp_check2/
 file_list=/atlas/users/mmunozsa/Rate_and_livetime/list_files_skim
 
 while IFS='' read -r line || [[ -n "$line" ]];
