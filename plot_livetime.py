@@ -2,7 +2,7 @@ import numpy as np
 import sys
 import healpy
 
-inF = [x for x in sys.argv if '__livetime_nosaa.npz' in x]
+inF = [x for x in sys.argv if '__livetime_nosaa2.npz' in x]
 
 for i in inF:
     d=np.load(i)
