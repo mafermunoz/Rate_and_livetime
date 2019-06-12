@@ -11,4 +11,4 @@ source /cvmfs/dampe.cern.ch/rhel6-64/etc/setup.sh
 source ~/astro/bin/activate
 dampe_init > /dev/null
 
-python calc_livetime_from_livetime.py ${1}
+python calc_livetime_from_deltatime.py ${1}
