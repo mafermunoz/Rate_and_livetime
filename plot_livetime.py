@@ -1,17 +1,23 @@
 import numpy as np
 import sys
 
-inF = [x for x in sys.argv if '_deltatime_nosaa.npz' in x]
+inF = [x for x in sys.argv if '_livetime_nosaa.npz' in x]
 
 for i in inF:
-    a=np.load(i)
-    b=np.stack((a['delta_t'],a['l'],a['b']),axis=1)
-    print (b.shape)
-    time_st01=b[b[:,0]<0.1]
-    time_lt00375=time_st01[time_st01[:,0]>0.00375]
-    time_lt00375[0]=time_lt00375[0]-0.00375
-    print(time_lt00375.shape)
+    d=np.load(i)
+    NSIDE=128
+    data={'L':d[:,1],"B":d[:,2]}
+    pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['L'],(data[B]))
+
+    hitmap = np.zeros(healpy.nside2npix(NSIDE))
+    pixels_binned = np.bincount(pixels)
+    hitmap[:len(pixels_binned)] =  pixels_binned
+    fig = plt.figure(figsize=(20, 15))
+    healpy.mollview(hitmap,coord=['C','G'],title='',hold=True)
+    healpy.graticule()
+    fig.savefig('../map_2016_'+str(i))
+
 
     outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
-    name=i.split("/")[-1].replace("_deltatime_nosaa.npz","_livetime_nosaa.npz")
-    np.save(outpath+name,time_lt00375)
+    name=i.split("/")[-1].replace("_map_livetime_nosaa.npz")
+    np.save(outpath+name,hitmap)
