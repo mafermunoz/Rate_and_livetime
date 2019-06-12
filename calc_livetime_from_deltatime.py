@@ -42,6 +42,7 @@ for i in inF:
             #wosaa=np.stack((lt_wosaa,lt_wosaa_l,lt_wosaa_b))
             #saa=np.stack((lt_saa,lt_saa_l,lt_saa_b))
             #all=np.stack((lt_all,lt_all_l,lt_all_b))
-            outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
-            name=i.split("/")[-1].replace("_deltatime.npz","_livetime.npz")
-            np.savez(outpath+name,time=lt_wosaa,l=lt_wosaa_l,b=lt_wosaa_b)#,saa,all)
+
+    outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
+    name=i.split("/")[-1].replace("_deltatime.npz","_livetime.npz")
+    np.savez(outpath+name,time=lt_wosaa,l=lt_wosaa_l,b=lt_wosaa_b)#,saa,all)
