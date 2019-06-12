@@ -49,5 +49,5 @@ for i in inF:
      #saa=np.stack((lt_saa,lt_saa_l,lt_saa_b))
      #all=np.stack((lt_all,lt_all_l,lt_all_b))
      outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
-     name=i.split("/")[-1].replace("rate.root","_time_pos_average.npz")
+     name=i.split("/")[-1].replace("rate.root","_deltatime.npz")
      np.savez(outpath+name,saa=saa,delta_t=delta_t,l=l,b=b)#,saa,all)
