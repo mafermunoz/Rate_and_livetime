@@ -1,7 +1,7 @@
 #!/bin/bash
 LIST_PATH="/beegfs/dampe/users/mmunozsa/test_rate/rate_info_per_month/DAMPE_2A_OBS_"
 
-for i in {2016..2016}
+for i in {2016..2019}
 do
   echo $i
   for j in {1..12}
