@@ -6,6 +6,7 @@ inF = [x for x in sys.argv if '_livetime_nosaa.npz' in x]
 
 for i in inF:
     d=np.load(i)
+    print(i)
     NSIDE=128
     data={'L':d[:,1],"B":d[:,2]}
     pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['B'],(data['L']))
