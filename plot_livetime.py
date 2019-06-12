@@ -8,7 +8,7 @@ for i in inF:
     d=np.load(i)
     print(i)
     NSIDE=128
-    data={'L':d[:,1],"B":d[:,2]}
+    data={'L':d[:,1],'B':d[:,2]}
     pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['B'],(data['L']))
 
     hitmap = np.zeros(healpy.nside2npix(NSIDE))
