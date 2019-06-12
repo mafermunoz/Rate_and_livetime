@@ -6,10 +6,11 @@ inF = [x for x in sys.argv if '_deltatime_nosaa.npz' in x]
 
 for i in inF:
     a=np.load(i)
-    b=np.array[(a['delta_t'],a['l'],a['b'])]
-    time_st01=a[b[:,0]<0.1]
-    time_lt00375=time_st01[time_st01[:,0]>0.00375]
-    time_lt00375[0]=time_lt00375[0]-0.00375
+    b=np.stack((a['delta_t'],a['l'],a['b']))
+    b.shape
+    #time_st01=a[b[:,0]<0.1]
+    #time_lt00375=time_st01[time_st01[:,0]>0.00375]
+    #time_lt00375[0]=time_lt00375[0]-0.00375
 
 
     outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
