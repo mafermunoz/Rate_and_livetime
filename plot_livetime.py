@@ -8,13 +8,13 @@ for i in inF:
     d=np.load(i)
     NSIDE=128
     data={'L':d[:,1],"B":d[:,2]}
-    pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['L'],(data['B']))
+    pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['B'],(data['L']))
 
     hitmap = np.zeros(healpy.nside2npix(NSIDE))
     pixels_binned = np.bincount(pixels)
     hitmap[:len(pixels_binned)] =  pixels_binned
     fig = plt.figure(figsize=(20, 15))
-    healpy.mollview(hitmap,coord=['C','G'],title='',hold=True)
+    healpy.mollview(hitmap,coord=['G'],title='',hold=True)
     healpy.graticule()
     fig.savefig('../map_2016_'+str(i))
 
