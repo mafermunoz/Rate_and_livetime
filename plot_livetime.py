@@ -12,7 +12,7 @@ for i in inF:
     pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['B'],(data['L']))
 
     hitmap = np.zeros(healpy.nside2npix(NSIDE))
-    pixels_binned = np.bincount(pixels)
+    pixels_binned = np.bincount(pixels,weights=d[:,0])
     hitmap[:len(pixels_binned)] =  pixels_binned
     #fig = plt.figure(figsize=(20, 15))
     #healpy.mollview(hitmap,coord=['G'],title='',hold=True)
