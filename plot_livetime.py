@@ -21,5 +21,5 @@ for i in inF:
 
 
     outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
-    name=i.split("/")[-1].replace('_livetime_nosaa.npz',"_map_livetime_nosaa.npz")
+    name=i.split("/")[-1].replace('_livetime_nosaa2.npz',"_map_livetime_nosaa2.npz")
     np.save(outpath+name,hitmap)
