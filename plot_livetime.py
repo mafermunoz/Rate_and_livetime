@@ -8,7 +8,7 @@ for i in inF:
     d=np.load(i)
     NSIDE=128
     data={'L':d[:,1],"B":d[:,2]}
-    pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['L'],(data[B]))
+    pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['L'],(data['B']))
 
     hitmap = np.zeros(healpy.nside2npix(NSIDE))
     pixels_binned = np.bincount(pixels)
