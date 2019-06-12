@@ -24,6 +24,8 @@ for i in inF:
     #print len(b)
     #info=np.stack((delta_t,saa,l,b))
     for j,x in enumerate(a['delta_t']):
+        if(j%10000==0):
+            print(j)
         if (x<0.1 and x>0.00375 and a['saa'][j]==False):
             lt_wosaa.append((x-0.00375))
             lt_wosaa_l.append(a['l'][j])
