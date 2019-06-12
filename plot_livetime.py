@@ -1,5 +1,6 @@
 import numpy as np
 import sys
+import healpy
 
 inF = [x for x in sys.argv if '_livetime_nosaa.npz' in x]
 
