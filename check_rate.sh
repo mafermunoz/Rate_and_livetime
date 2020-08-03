@@ -1,14 +1,14 @@
 #!/bin/bash
 OUTPATH=/beegfs/dampe/users/mmunozsa/test_rate/
 count=1
-for f in $(cat list_all)
+for f in $(cat list_files_2015_2020)
 do
 	if [ ! -f ${f} ]; then
 		echo "File not found: " ${f}
 		continue
 	fi
 	BSN=$(basename ${f})
-	OUTF=${BSN/".root"/"_rate.root"}
+	OUTF=${BSN/".root"/"_rate_new.root"}
 	if [ ! -f ${OUTPATH}/${OUTF} ]; then
 		echo "Submitting: " ${BSN}
 		sbatch submit_rate.sh ${f} ${OUTPATH}/${OUTF} > /dev/null
