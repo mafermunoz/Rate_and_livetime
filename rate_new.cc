@@ -138,7 +138,10 @@ int main(int argc, char** argv){
   cout<< n_entries<< endl;
 
   ct->GetEntry(0); //Get the intial time
+  time_start=evtheader->GetSecond()+(evtheader->GetMillisecond())*0.001;
 
+  ct->GetEntry(n_entries-1); //Get the intial time
+  time_end=evtheader->GetSecond()+(evtheader->GetMillisecond())*0.001;
 
 
   for (int i=0; i< n_entries; i++){
