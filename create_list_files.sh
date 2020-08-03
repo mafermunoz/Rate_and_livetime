@@ -1,7 +1,7 @@
 #!/bin/bash
 LIST_PATH="/beegfs/dampe/prod/FM/FlightData/2A/"
 
-for i in {2015..2019}
+for i in {2015..2020}
 do
   echo $i
   for j in {1..12}

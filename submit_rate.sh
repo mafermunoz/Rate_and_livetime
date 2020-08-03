@@ -1,13 +1,15 @@
-#!/bin/bash
-#SBATCH --partition=rhel6-veryshort
+#!/bin/sh
 #SBATCH --ntasks=1
 #SBATCH --mem=10G
-#SBATCH --job-name=Rate
+#SBATCH --job-name=clone_G
 
 
 export HOME=/atlas/users/mmunozsa/
 
-source /cvmfs/dampe.cern.ch/rhel6-64/etc/setup.sh
-dampe_init > /dev/null
+source  /cvmfs/dampe.cern.ch/centos7/etc/setup.sh
+#source ~/astro/bin/activate
+dampe_init
+export LD_LIBRARY_PATH=/cvmfs/dampe.cern.ch/centos7/opt/DMPSW/latest/lib:${LD_LIBRARY_PATH}
 
-./rate ${1} ${2}
+
+./rate_new ${1} ${2}
