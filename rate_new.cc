@@ -102,7 +102,7 @@ int main(int argc, char** argv){
 
   Int_t time_ms,time_s;
   bool saa;
-  Float_t trigger[4]={};
+  Float_t trigger[5]={};
   double sky_coord[4]={};
   double t_coord[2]={};
   double c_coord[2]={};
