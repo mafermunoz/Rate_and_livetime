@@ -17,7 +17,7 @@ do
 
 	if [ $aa -gt 300 ]; then
 		echo "waiting..." $aa
-		sleep 20
+		sleep 200
 	fi
 
 		#count=$count+1

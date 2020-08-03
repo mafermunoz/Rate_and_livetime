@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --ntasks=1
 #SBATCH --mem=10G
-#SBATCH --job-name=clone_G
+#SBATCH --job-name=rate
 
 
 export HOME=/atlas/users/mmunozsa/
