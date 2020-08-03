@@ -105,7 +105,7 @@ int main(int argc, char** argv){
   Float_t trigger[4]={};
   double sky_coord[4]={};
   double t_coord[2]={};
-  double c_coord[2]={}
+  double c_coord[2]={};
   Float_t time_start, time_end;
   Long64_t n_entries;
   Float_t energy;
