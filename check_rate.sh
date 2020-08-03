@@ -18,6 +18,8 @@ do
 	if [ $aa -gt 300 ]; then
 		echo "waiting..." $aa
 		sleep 200
+		rm slurm-*
+
 	fi
 
 		#count=$count+1
