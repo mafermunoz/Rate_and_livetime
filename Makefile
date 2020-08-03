@@ -26,14 +26,15 @@ endif
 
 
 CXXFLAGS += -I $(DMPSWSYS)/include
+CXXFLAGS += -I /cvmfs/dampe.cern.ch/centos7/include
 
-LIBS += -L $(DMPSWSYS)/lib -lDmpEvent -lDmpService -lDmpEventFilter -lDmpKernel
+LIBS += -L $(DMPSWSYS)/lib -lDmpEvent -lDmpService -lDmpEventFilter -lDmpKernel -lboost_filesystem  -lboost_system
 #------------------------------------------------------------------------------
 
 
-CLUMONIO       = timestamp_check.$(ObjSuf)
-CLUMONIS       = timestamp_check.$(SrcSuf)
-CLUMONI        = timestamp_check$(ExeSuf)
+CLUMONIO       = rate_new.$(ObjSuf)
+CLUMONIS       = rate_new.$(SrcSuf)
+CLUMONI        = rate_new$(ExeSuf)
 
 
 OBJS          = $(CLUMONIO)
