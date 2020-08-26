@@ -50,4 +50,4 @@ for i in inF:
      #all=np.stack((lt_all,lt_all_l,lt_all_b))
      outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
      name=i.split("/")[-1].replace("rate.root","_deltatime_nosaa.npz")
-     np.savez(outpath+name,delta_t=delta_t,l=l,b=b)#,saa,all)
+     np.savez(outpath+name,delta_t=delta_t,l=l,b=b,time=time_avg)#,saa,all)
