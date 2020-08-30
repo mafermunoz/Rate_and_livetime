@@ -16,7 +16,7 @@ for i in inF:
      b=0.5*(sky_coord_b[1:]+sky_coord_b[:-1])
      livetime=np.zeros(len(delta_t))
      np.subtract(delta_t,0.00375,out=livetime,where=(delta_t>0.00375))
-     np.where(delta_t>0.1,livetime*0,livetime)
+     lv=np.where(delta_t>0.1,livetime*0,livetime)
 
 
      #lt_wosaa=[]
@@ -55,4 +55,4 @@ for i in inF:
      #all=np.stack((lt_all,lt_all_l,lt_all_b))
      outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
      name=i.split("/")[-1].replace("rate.root","_deltatime_nosaa.npz")
-     np.savez(outpath+name,delta_t=delta_t,l=l,b=b,time=time_avg,livetime=livetime)#,saa,all)
+     np.savez(outpath+name,delta_t=delta_t,l=l,b=b,time=time_avg,livetime=lv)#,saa,all)

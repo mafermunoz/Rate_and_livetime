@@ -1,22 +1,24 @@
-#!/bin/bash
-LIST_PATH="/beegfs/dampe/users/mmunozsa/test_rate/rate_info_per_month/DAMPE_2A_OBS_"
-
-for i in {2016..2019}
+count=1
+for f in $(cat list_files)
 do
-  echo $i
-  for j in {1..12}
-  do
-    if [[ $j -lt 10 ]]; then
-        unset SEARCH_PATH
-        SEARCH_PATH=$LIST_PATH$i"0"$j
-        echo $SEARCH_PATH
-        sbatch submit_livetime.sh $SEARCH_PATH"_rate.root"
-    else
-        unset SEARCH_PATH
-        SEARCH_PATH=$LIST_PATH$i$j
-        echo $SEARCH_PATH
-        sbatch submit_livetime.sh $SEARCH_PATH"_rate.root"
+    if [ ! -f ${f} ]; then
+	echo "File not found: " ${f}
+	continue
+	fi
+    #BSN=$(basename ${f})
+    #OUTF=${BSN/".root"/"_energy.root"}
+
+	echo "Submitting: " ${f}
+
+	sbatch submit_livetime.sh ${f} > /dev/null
+  #sleep 1
+  aa=`squeue -u mmunozsa | wc -l`
+
+
+    if [ $aa -gt 300 ]; then
+      echo "waiting..." $aa
+      sleep 20
     fi
 
-  done
+
 done
