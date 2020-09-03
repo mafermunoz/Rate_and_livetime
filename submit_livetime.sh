@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --ntasks=1
-#SBATCH --mem=10G
+#SBATCH --mem=3G
 #SBATCH --job-name=Rate
 
 
