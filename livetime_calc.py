@@ -59,7 +59,7 @@ for i in inF:
      name=i.split("/")[-1].replace("rate.root","_deltatime_nosaa.npz")
 
      file1 = open(outpath+name+".txt","w+")
-     file1.write(str(tt)+"  "+str(sum(lv)))
+     file1.write(str(tt)+"  "+str(sum(lv))+"\n")
 
      file1.close()
      np.savez(outpath+name,delta_t=delta_t,l=l,b=b,time=time_avg,livetime=lv)#,saa,all)
