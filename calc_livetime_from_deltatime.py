@@ -2,7 +2,7 @@ from root_numpy import root2array
 import numpy as np
 import sys
 
-inF = [x for x in sys.argv if '_deltatime_nosaa.npz' in x]
+inF = [x for x in sys.argv if '_deltatime.npz' in x]
 
 for i in inF:
     a=np.load(i)
