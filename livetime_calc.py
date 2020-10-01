@@ -5,7 +5,7 @@ import sys
 inF = [x for x in sys.argv if '.root' in x]
 
 for i in inF:
-     a=root2array(i,branches=['time_s','time_ms','saa','sky_coord'],selection='saa==1')
+     a=root2array(i,branches=['time_s','time_ms','saa','sky_coord'],selection='saa==0')
      time=a['time_s']+a['time_ms']*0.001
      delta_t=time[1:]-time[:-1]
      #saa=np.logical_and(a['saa'][1:], a['saa'][:-1])
@@ -59,7 +59,7 @@ for i in inF:
      #saa=np.stack((lt_saa,lt_saa_l,lt_saa_b))
      #all=np.stack((lt_all,lt_all_l,lt_all_b))
      outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
-     name=i.split("/")[-1].replace("rate.root","_deltatime_saa.npz")
+     name=i.split("/")[-1].replace("rate.root","_deltatime_nosaa.npz")
 
      file1 = open(outpath+name+".txt","w+")
      file1.write(str(tt)+"  "+str(sum(lv))+"\n")
