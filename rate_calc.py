@@ -58,7 +58,7 @@ for i in inF:
      #wosaa=np.stack((lt_wosaa,lt_wosaa_l,lt_wosaa_b))
      #saa=np.stack((lt_saa,lt_saa_l,lt_saa_b))
      #all=np.stack((lt_all,lt_all_l,lt_all_b))
-     outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
+     outpath="/beegfs/dampe/users/mmunozsa/trigger_rate/"
      name=i.split("/")[-1].replace("rate.root","rate")
 
      file1 = open(outpath+name+".txt","w+")
