@@ -15,7 +15,7 @@ for i in inF:
      #np.subtract(delta_t,0.0030725,out=livetime,where=(delta_t>=0.0030725))
      #lv=np.where(delta_t>=1,livetime*0,livetime)
 
-    trigger=a['trigger']
+     trigger=a['trigger']
 
      tt=np.average(time_avg)
      print(trigger)
