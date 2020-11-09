@@ -7,7 +7,7 @@ inF = [x for x in sys.argv if '.root' in x]
 for i in inF:
      a=root2array(i,branches=['time_s','time_ms','trigger'])
      time=a['time_s']+a['time_ms']*0.001
-     delta_t=time[1:]-time[:-1]
+
      #saa=np.logical_and(a['saa'][1:], a['saa'][:-1])
      time_avg=0.5*(time[1:]+time[:-1])
 
@@ -15,8 +15,10 @@ for i in inF:
      #np.subtract(delta_t,0.0030725,out=livetime,where=(delta_t>=0.0030725))
      #lv=np.where(delta_t>=1,livetime*0,livetime)
 
+    trigger=a['trigger']
+
      tt=np.average(time_avg)
-     print(trigger[0])
+     print(trigger)
 
      t0=np.sum(trigger[0,:])
      t1=np.sum(trigger[1,:])
