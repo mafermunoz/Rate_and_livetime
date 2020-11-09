@@ -19,7 +19,7 @@ for i in inF:
 
      tt=np.average(time_avg)
 
-
+     ne=len((trigger[:,0]))
      t0=np.sum(trigger[:,0])
      t1=np.sum(trigger[:,1])
      t2=np.sum(trigger[:,2])
@@ -66,6 +66,6 @@ for i in inF:
      name=i.split("/")[-1].replace("rate.root","rate")
 
      file1 = open(outpath+name+".txt","w+")
-     file1.write(str(tt)+"  "+str(t0)+"    "+str(t1)+"  "+str(t2)+" "+str(t3)+" "+str(t4)+"\n")
+     file1.write(str(tt)+"  "+str(ne)+" "+str(t0)+"    "+str(t1)+"  "+str(t2)+" "+str(t3)+" "+str(t4)+"\n")
 
      file1.close()
