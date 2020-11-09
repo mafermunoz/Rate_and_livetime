@@ -16,6 +16,8 @@ for i in inF:
      #lv=np.where(delta_t>=1,livetime*0,livetime)
 
      tt=np.average(time_avg)
+     print(trigger[0])
+
      t0=np.sum(trigger[0,:])
      t1=np.sum(trigger[1,:])
      t2=np.sum(trigger[2,:])
