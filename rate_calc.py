@@ -18,7 +18,7 @@ for i in inF:
      trigger=a['trigger']
 
      tt=np.average(time_avg)
-     print(trigger[:,0])
+
 
      t0=np.sum(trigger[:,0])
      t1=np.sum(trigger[:,1])
