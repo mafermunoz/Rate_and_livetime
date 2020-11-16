@@ -10,7 +10,7 @@ for i in inF:
     d=np.load(i)
     print(i)
     NSIDE=128
-    data={'L':d['b'],'B':d['l']}
+    data={'L':d['l'],'B':d['b']}
     pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['B'],(data['L']))
 
     hitmap = np.zeros(healpy.nside2npix(NSIDE))
