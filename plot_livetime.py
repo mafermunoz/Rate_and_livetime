@@ -2,13 +2,13 @@ import numpy as np
 import sys
 import healpy
 
-inF = [x for x in sys.argv if '__livetime_nosaa2.npz' in x]
+inF = [x for x in sys.argv if '.npz' in x]
 
 for i in inF:
     d=np.load(i)
     print(i)
     NSIDE=128
-    data={'L':d[:,1],'B':d[:,2]}
+    data={'L':d['l'],'B':d['b']}
     pixels=healpy.ang2pix(NSIDE,np.deg2rad(90)-data['B'],(data['L']))
 
     hitmap = np.zeros(healpy.nside2npix(NSIDE))
@@ -20,6 +20,6 @@ for i in inF:
     #fig.savefig('../map_2016_'+str(i))
 
 
-    outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/"
-    name=i.split("/")[-1].replace('_livetime_nosaa2.npz',"_map_livetime_nosaa2.npz")
+    outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/maps/"
+    name=i.split("/")[-1].replace('.npz',"_map.npz")
     np.save(outpath+name,hitmap)
