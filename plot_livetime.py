@@ -6,6 +6,7 @@ inF = [x for x in sys.argv if '.npz' in x]
 print(inF)
 
 for i in inF:
+    print (i)
     d=np.load(i)
     print(i)
     NSIDE=128
