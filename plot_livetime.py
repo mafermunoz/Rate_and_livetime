@@ -3,6 +3,7 @@ import sys
 import healpy
 
 inF = [x for x in sys.argv if '.npz' in x]
+print(inF)
 
 for i in inF:
     d=np.load(i)
