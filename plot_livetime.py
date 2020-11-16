@@ -23,6 +23,7 @@ for i in inF:
 
 
     outpath="/beegfs/dampe/users/mmunozsa/livetime_per_month/maps/"
+    print (outpath)
     name=i.split("/")[-1].replace('.npz',"_map.npz")
     print(name)
     np.save(outpath+name,hitmap)
