@@ -15,8 +15,8 @@ for i in inF:
      l=0.5*(sky_coord_l[1:]+sky_coord_l[:-1])
      b=0.5*(sky_coord_b[1:]+sky_coord_b[:-1])
      livetime=np.zeros(len(delta_t))
-     b=np.where(delta_t>=1,delta_t*0,delta_t)
-     d=np.where(delta_t<0.0030725,b*0,b)
+     a=np.where(delta_t>=1,delta_t*0,delta_t)
+     d=np.where(delta_t<0.0030725,a*0,a)
      #np.subtract(delta_t,0.0030725,out=livetime,where=(delta_t>=0.0030725))
      #lv=np.where(delta_t>=1,livetime*0,livetime)
      lv=d-0.0030725
