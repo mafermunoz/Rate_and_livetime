@@ -12,4 +12,4 @@ export HOME=/atlas/users/mmunozsa/
 #export LD_LIBRARY_PATH=/cvmfs/dampe.cern.ch/centos7/opt/DMPSW/latest/lib:${LD_LIBRARY_PATH}
 
 
-python rate_calc.py ${1}
+python livetime_calc.py ${1}
