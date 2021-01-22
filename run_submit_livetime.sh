@@ -1,5 +1,5 @@
 count=1
-for f in $(cat list_lv2021)
+for f in $(cat list_lv20201)
 do
     if [ ! -f ${f} ]; then
 	echo "File not found: " ${f}
